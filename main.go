@@ -17,5 +17,7 @@ func main() {
     // let's do some test about slices
     // SlicesTest()
 
-    Maps()
+    // Maps()
+    // Ranges()
+    Functions()
 }

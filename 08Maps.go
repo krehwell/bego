@@ -20,8 +20,8 @@ func Maps() {
 
     fmt.Println("length of m after delete k1 = ", len(m), "-- and m = ", m)
 
-    result, prs := m["k1"]
-    fmt.Println("result, prs := m['k1'] |", result, prs)
+    result, isAvailable := m["k1"]
+    fmt.Println("result, prs := m['k1'] |", result, isAvailable)
 
     // inline initialization
     n := map[string]string{"child1": "yuza", "child2":"yakuza"}
