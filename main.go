@@ -19,5 +19,9 @@ func main() {
 
     // Maps()
     // Ranges()
-    Functions()
+    // Functions()
+    // Functions2()
+    VariadicFunction()
+
+    // let's do some test before continue
 }
