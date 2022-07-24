@@ -37,6 +37,7 @@ func Slices() {
 
     fmt.Println("-----------")
 
+    // initialize without using make
     t := []string{"bata", "subaru", "labu"}
     fmt.Println("t", t)
 

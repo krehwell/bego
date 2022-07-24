@@ -21,7 +21,8 @@ func main() {
     // Ranges()
     // Functions()
     // Functions2()
-    VariadicFunction()
+    // VariadicFunction()
 
     // let's do some test before continue
+    MultipleOf3And5()
 }
