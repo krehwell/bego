@@ -14,7 +14,7 @@ func main() {
     // Arrays()
     // Slices()
 
-    // let's do some test about slices
+    // Test: let's do some test about slices
     // SlicesTest()
 
     // Maps()
@@ -23,6 +23,7 @@ func main() {
     // Functions2()
     // VariadicFunction()
 
-    // let's do some test before continue
+    // Test: let's do some test before continue
     MultipleOf3And5()
+    EvenFibonacciNumber()
 }
