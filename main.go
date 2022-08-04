@@ -24,6 +24,7 @@ func main() {
     // VariadicFunction()
 
     // Test: let's do some test before continue
-    MultipleOf3And5()
-    EvenFibonacciNumber()
+    // MultipleOf3And5()
+    // EvenFibonacciNumber()
+    LargestPrimeNumber()
 }
