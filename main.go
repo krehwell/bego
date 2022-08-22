@@ -26,5 +26,6 @@ func main() {
     // Test: let's do some test before continue
     // MultipleOf3And5()
     // EvenFibonacciNumber()
-    LargestPrimeNumber()
+    // LargestPrimeNumber()
+    LargestPalindromeProduct()
 }
