@@ -27,7 +27,7 @@ func main() {
     // MultipleOf3And5()
     // EvenFibonacciNumber()
     // LargestPrimeNumber()
-    // LargestPalindromeProduct()
+    LargestPalindromeProduct()
 
-    Closure()
+    // Closure()
 }
