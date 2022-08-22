@@ -1,4 +1,4 @@
-//hi
+// Hi
 package main
 
 import (
