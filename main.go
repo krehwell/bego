@@ -29,8 +29,9 @@ func main() {
     // LargestPrimeNumber()
     // LargestPalindromeProduct()
     // SmallestMultiple()
+    SumSquareDifference()
 
     // Closure()
     // Recursive()
-    Pointers()
+    // Pointers()
 }
