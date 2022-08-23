@@ -31,5 +31,6 @@ func main() {
     // SmallestMultiple()
 
     // Closure()
-    Recursive()
+    // Recursive()
+    Pointers()
 }
