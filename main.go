@@ -34,5 +34,6 @@ func main() {
     // Closure()
     // Recursive()
     // Pointers()
-    NthPrimeNumber()
+    // NthPrimeNumber()
+    StringsAndRunes()
 }
