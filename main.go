@@ -30,11 +30,12 @@ func main() {
     // LargestPalindromeProduct()
     // SmallestMultiple()
     // SumSquareDifference()
-    LargestProductInSeries()
+    // LargestProductInSeries()
 
     // Closure()
     // Recursive()
     // Pointers()
     // NthPrimeNumber()
     // StringsAndRunes()
+    StructInGo()
 }
