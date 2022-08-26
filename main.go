@@ -31,7 +31,7 @@ func main() {
     // SmallestMultiple()
     // SumSquareDifference()
     // LargestProductInSeries()
-    SpecialPythagoreanTriplet()
+    // SpecialPythagoreanTriplet()
 
     // Closure()
     // Recursive()
@@ -39,4 +39,5 @@ func main() {
     // NthPrimeNumber()
     // StringsAndRunes()
     // StructInGo()
+    MethodExample()
 }
