@@ -31,11 +31,12 @@ func main() {
     // SmallestMultiple()
     // SumSquareDifference()
     // LargestProductInSeries()
+    SpecialPythagoreanTriplet()
 
     // Closure()
     // Recursive()
     // Pointers()
     // NthPrimeNumber()
     // StringsAndRunes()
-    StructInGo()
+    // StructInGo()
 }
