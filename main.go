@@ -39,5 +39,6 @@ func main() {
     // NthPrimeNumber()
     // StringsAndRunes()
     // StructInGo()
-    MethodExample()
+    // MethodExample()
+    InterfaceExample()
 }
