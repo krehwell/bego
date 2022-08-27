@@ -32,6 +32,7 @@ func main() {
     // SumSquareDifference()
     // LargestProductInSeries()
     // SpecialPythagoreanTriplet()
+    SummationOfPrime()
 
     // Closure()
     // Recursive()
@@ -40,5 +41,5 @@ func main() {
     // StringsAndRunes()
     // StructInGo()
     // MethodExample()
-    InterfaceExample()
+    // InterfaceExample()
 }
