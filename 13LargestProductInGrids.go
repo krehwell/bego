@@ -134,13 +134,31 @@ func getBiggestForRight(series [][]int) int {
 }
 
 func getBiggestForDiagonalDownLeft(series [][]int) int {
-    return 0
+    max := 0
+
+    for i := 0; i <= len(series) - adjacent; i++ {
+        tempMax := 0
+        for j := 0; j <= len(series[i]) - adjacent; j++ {
+            num1 := series[i][j]
+            num2 := series[i + 1][j + 1]
+            num3 := series[i + 2][j + 2]
+            num4 := series[i + 3][j + 3]
+
+            tempMax = arrayProduct([]int{num1, num2, num3, num4}...)
+        }
+
+        if tempMax > max {
+            max = tempMax
+        }
+    }
+
+    return max
 }
 
 func LargestProductInGrid() {
     /**
      * What is the greatest product of four adjacent numbers in the same direction (down, right, or diagonally) in the 20×20 grid?
-     * answer:
+     * answer: 70600674
      */
     g := getGrid()
 
@@ -151,7 +169,7 @@ func LargestProductInGrid() {
 
     maxDiagonalDownLeft := getBiggestForDiagonalDownLeft(g)
 
-    fmt.Println("maxDown: ", maxDown)
-    fmt.Println("maxRight: ", maxRight)
-    fmt.Println("maxDiagonalDownLeft: ", maxDiagonalDownLeft)
+    fmt.Println("maxDown:", maxDown)
+    fmt.Println("maxRight:", maxRight)
+    fmt.Println("maxDiagonalDownLeft:", maxDiagonalDownLeft)
 }
