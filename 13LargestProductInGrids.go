@@ -105,10 +105,10 @@ func transpose(series [][]int) [][]int {
 func getBiggestForDown(series [][]int) int {
     max := 0
     for i := 0; i < len(series); i++ {
-        temMax := 0
+        temMax := 1
 
         for j := 0; j < len(series[i]) - adjacent; j += 1 {
-            temMax += arraySum(series[i][j : j + adjacent]...)
+            temMax *= arraySum(series[i][j : j + adjacent]...)
         }
 
         if temMax > max {
