@@ -31,13 +31,36 @@ const (
     adjacent = 4
 )
 
-func gridToStringArray() [][gridRowLen]int {
+type Direction int
+const (
+    Down Direction = iota
+    Up
+    Left
+    Right
+    DiagonalUpLeft
+    DiagonalUpRight
+    DiagonalDownLeft
+    DiagonalDownRight
+)
+
+func arraySum(nums ...int) int {
+    result := 0
+
+    for _, i := range nums {
+        result += i
+    }
+
+    return result
+}
+
+// parse the `grid` string to [][]int
+func getGrid() [][]int {
     rawGrid := strings.ReplaceAll(grid, "\n", " ")
     rawGridSplit := strings.Split(rawGrid, " ");
-    rawGridResult := [][gridRowLen]int{}
+    rawGridResult := make([][]int, 0)
 
-    for i := 0; i < len(rawGridSplit) - gridRowLen + 1; i += gridRowLen {
-        oneDBucket := [gridRowLen]int{}
+    for i := 0; i <= len(rawGridSplit) - gridRowLen; i += gridRowLen {
+        oneDBucket := make([]int, 0)
 
         for j := 0; j < gridRowLen; j++ {
             rawGridNum := rawGridSplit[i + j]
@@ -52,14 +75,48 @@ func gridToStringArray() [][gridRowLen]int {
                 break
             }
 
-            oneDBucket[j] = num
+            oneDBucket = append(oneDBucket, num)
         }
 
         rawGridResult = append(rawGridResult, oneDBucket)
     }
 
-    fmt.Println(rawGridResult)
     return rawGridResult
+}
+
+func transpose(series [][]int) [][]int {
+    xl := len(series[0])
+    yl := len(series)
+
+    result := make([][]int, xl)
+    for i := range series {
+        result[i] = make([]int, yl)
+    }
+
+    for i := 0; i < xl; i++ {
+        for j := 0; j < yl; j++ {
+            result[i][j] = series[j][i]
+        }
+    }
+
+    return result
+}
+
+func getBiggestForDown(series [][]int) int {
+    max := 0
+    for i := 0; i < len(series); i++ {
+        temMax := 0
+
+        for j := 0; j < len(series[i]) - adjacent; j += 1 {
+            temMax += arraySum(series[i][j : j + adjacent]...)
+        }
+
+        if temMax > max {
+            max = temMax
+        }
+    }
+
+    return max
 }
 
 func LargestProductInGrid() {
@@ -68,5 +125,8 @@ func LargestProductInGrid() {
      * What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
      * answer:
      */
-     gridToStringArray()
+     g := getGrid()
+
+     gDown := transpose(g)
+     fmt.Println(getBiggestForDown(gDown))
 }
