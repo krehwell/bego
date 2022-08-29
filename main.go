@@ -33,7 +33,7 @@ func main() {
     // LargestProductInSeries()
     // SpecialPythagoreanTriplet()
     // SummationOfPrime()
-    LargestProductInGrid()
+    // LargestProductInGrid()
 
     // Closure()
     // Recursive()
@@ -44,4 +44,5 @@ func main() {
     // MethodExample()
     // InterfaceExample()
     // StructEmbedding()
+    Generics()
 }
