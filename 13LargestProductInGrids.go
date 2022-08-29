@@ -34,20 +34,16 @@ const (
 type Direction int
 const (
     Down Direction = iota
-    Up
-    Left
     Right
-    DiagonalUpLeft
-    DiagonalUpRight
     DiagonalDownLeft
     DiagonalDownRight
 )
 
-func arraySum(nums ...int) int {
-    result := 0
+func arrayProduct(nums ...int) int {
+    result := 1
 
     for _, i := range nums {
-        result += i
+        result *= i
     }
 
     return result
@@ -108,7 +104,7 @@ func getBiggestForDown(series [][]int) int {
         temMax := 1
 
         for j := 0; j < len(series[i]) - adjacent; j += 1 {
-            temMax *= arraySum(series[i][j : j + adjacent]...)
+            temMax = arrayProduct(series[i][j : j + adjacent]...)
         }
 
         if temMax > max {
@@ -119,14 +115,36 @@ func getBiggestForDown(series [][]int) int {
     return max
 }
 
+func getBiggestForRight(series [][]int) int {
+    max := 0
+
+    for i := 0; i < len(series); i++ {
+        tempMax := 1
+        for j := 0; j < len(series[i]) - adjacent; j += adjacent {
+            tempMax = arrayProduct(series[i][j: j + adjacent]...)
+        }
+
+        if tempMax > max {
+            max = tempMax
+        }
+    }
+
+    return max
+}
+
 func LargestProductInGrid() {
     /**
-     * The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
-     * What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
+     * What is the greatest product of four adjacent numbers in the same direction (down, right, or diagonally) in the 20×20 grid?
      * answer:
      */
      g := getGrid()
 
      gDown := transpose(g)
-     fmt.Println(getBiggestForDown(gDown))
+     maxDown := getBiggestForDown(gDown)
+
+     maxRight := getBiggestForRight(g)
+
+
+     fmt.Println("maxDown: ", maxDown)
+     fmt.Println("maxRight: ", maxRight)
 }
