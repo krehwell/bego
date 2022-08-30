@@ -35,7 +35,7 @@ func main() {
     // SummationOfPrime()
     // LargestProductInGrid()
     // HighlyDivisibleTriangular()
-    LargeSum()
+    // LargeSum()
 
     // Closure()
     // Recursive()
@@ -48,4 +48,5 @@ func main() {
     // StructEmbedding()
     // Generics()
     // Errors()
+    Goroutine()
 }
