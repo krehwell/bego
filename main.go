@@ -36,6 +36,7 @@ func main() {
     // LargestProductInGrid()
     // HighlyDivisibleTriangular()
     // LargeSum()
+    LongestCollatzSequence()
 
     // Closure()
     // Recursive()
@@ -48,5 +49,5 @@ func main() {
     // StructEmbedding()
     // Generics()
     // Errors()
-    Goroutine()
+    // Goroutine()
 }
