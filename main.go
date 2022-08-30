@@ -34,6 +34,7 @@ func main() {
     // SpecialPythagoreanTriplet()
     // SummationOfPrime()
     // LargestProductInGrid()
+    HighlyDivisibleTriangular()
 
     // Closure()
     // Recursive()
@@ -45,5 +46,5 @@ func main() {
     // InterfaceExample()
     // StructEmbedding()
     // Generics()
-    Errors()
+    // Errors()
 }
