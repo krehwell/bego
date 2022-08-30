@@ -34,7 +34,8 @@ func main() {
     // SpecialPythagoreanTriplet()
     // SummationOfPrime()
     // LargestProductInGrid()
-    HighlyDivisibleTriangular()
+    // HighlyDivisibleTriangular()
+    LargeSum()
 
     // Closure()
     // Recursive()
