@@ -112,7 +112,8 @@ const (
 func LargeSum() {
     /**
      * Work out the first ten digits of the sum of the following one-hundred 50-digit number
-     * answer: 5537376230
+     * slice 10 each and sum it
+     * answer: 5537376230...
      */
     sum := big.NewInt(0)
     for _, line := range strings.Split(n, "\n") {

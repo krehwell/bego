@@ -36,7 +36,8 @@ func main() {
     // LargestProductInGrid()
     // HighlyDivisibleTriangular()
     // LargeSum()
-    LongestCollatzSequence()
+    // LongestCollatzSequence()
+    LatticePath()
 
     // Closure()
     // Recursive()
