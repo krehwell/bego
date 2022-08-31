@@ -26,9 +26,10 @@ func LatticePath() {
     n := 20
 
     topFormula := getFactorial(2 * n)
-    belowFormula := big.NewInt(1).Mul(getFactorial(n), getFactorial(n))
+    _belowFormula := getFactorial(n)
+    belowFormula := big.NewInt(0).Mul(_belowFormula, _belowFormula)
 
-    result := big.NewInt(1).Div(topFormula, belowFormula)
+    result := big.NewInt(0).Div(topFormula, belowFormula)
 
     fmt.Println("result", result)
 }
