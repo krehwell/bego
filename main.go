@@ -37,6 +37,7 @@ func main() {
     // HighlyDivisibleTriangular()
     // LargeSum()
     // LongestCollatzSequence()
+    // LatticePath()
 
     // Closure()
     // Recursive()
