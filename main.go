@@ -47,7 +47,8 @@ func main() {
     // MethodExample()
     // InterfaceExample()
     // StructEmbedding()
-    Generics()
+    // Generics()
     // Errors()
     // Goroutine()
+    Channels()
 }
