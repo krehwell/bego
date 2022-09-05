@@ -5,14 +5,24 @@ import (
     "time"
 )
 
+func AddOne(ch chan int, val int) {
+    val += 1
+    time.Sleep(time.Second * 2)
+    ch <- val
+}
+
+func MulTen(ch chan int, resChan chan int) {
+    val := <-ch
+    val *= 10
+    resChan <- val
+}
+
 func Channels() {
-    message := make(chan string)
+    ch := make(chan int)
+    resChan := make(chan int)
 
-    go func() {
-        time.Sleep(time.Second * 2)
-        message <- "ping"
-    }()
+    go AddOne(ch, 9)
+    go MulTen(ch, resChan)
 
-    fmt.Println("Boo")
-    fmt.Println(<-message)
+    fmt.Println(<-resChan)
 }
