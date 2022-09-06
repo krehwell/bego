@@ -51,5 +51,6 @@ func main() {
     // Generics()
     // Errors()
     // Goroutine()
-    Channels()
+    // Channels()
+    ChannelSynchronization()
 }
