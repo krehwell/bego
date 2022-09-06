@@ -52,5 +52,6 @@ func main() {
     // Errors()
     // Goroutine()
     // Channels()
-    ChannelSynchronization()
+    // ChannelSynchronization()
+    ChannelsDirection()
 }
