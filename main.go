@@ -55,5 +55,6 @@ func main() {
     // ChannelSynchronization()
     // ChannelsDirection()
     // ChannelSelect()
-    Timeouts()
+    // Timeouts()
+    NonBlockingChannel()
 }
