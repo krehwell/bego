@@ -38,11 +38,11 @@ func main() {
     // LargeSum()
     // LongestCollatzSequence()
     // LatticePath()
+    // NthPrimeNumber()
 
     // Closure()
     // Recursive()
     // Pointers()
-    // NthPrimeNumber()
     // StringsAndRunes()
     // StructInGo()
     // MethodExample()
@@ -56,5 +56,6 @@ func main() {
     // ChannelsDirection()
     // ChannelSelect()
     // Timeouts()
-    NonBlockingChannel()
+    // NonBlockingChannel()
+    ClosingChannels()
 }
