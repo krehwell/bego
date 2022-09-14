@@ -57,5 +57,6 @@ func main() {
     // ChannelSelect()
     // Timeouts()
     // NonBlockingChannel()
-    ClosingChannels()
+    // ClosingChannels()
+    RangeOverChannels()
 }

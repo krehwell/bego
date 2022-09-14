@@ -12,6 +12,8 @@ func ClosingChannels() {
 		for {
 			j, more := <-jobs
 
+			fmt.Println("more", more)
+
 			if more {
 				fmt.Println("received job", j)
 			} else {
