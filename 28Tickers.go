@@ -13,16 +13,15 @@ func Tickers() {
 	go func() {
 		for {
 			select {
+			case time := <-ticker.C:
+				fmt.Println("Timer at", time)
 			case <-done:
 				return
-			case t := <-ticker.C:
-				fmt.Println("Time at", t)
 			}
 		}
 	}()
 
 	time.Sleep(1600 * time.Millisecond)
-
 	ticker.Stop()
 	done <- true
 
