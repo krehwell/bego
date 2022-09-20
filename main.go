@@ -60,5 +60,6 @@ func main() {
 	// ClosingChannels()
 	// RangeOverChannels()
 	// Timers()
-	Tickers()
+	// Tickers()
+	WorkerPools()
 }

@@ -5,7 +5,7 @@ import (
     "time"
 )
 
-func worker(done chan bool) {
+func workerExample(done chan bool) {
     fmt.Print("working...")
     time.Sleep(time.Second)
     fmt.Println("done")
@@ -16,7 +16,7 @@ func worker(done chan bool) {
 func ChannelSynchronization() {
     done := make(chan bool)
 
-    go worker(done)
+    go workerExample(done)
 
     <- done
 }
