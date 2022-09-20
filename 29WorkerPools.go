@@ -10,7 +10,7 @@ func workerJob(id int, jobs <-chan int, results chan<- int) {
 
     for j := range jobs {
         fmt.Println("worker", id, "started job", j)
-        time.Sleep(time.Second * 1)
+        time.Sleep(time.Second * 3)
         fmt.Println("worker", id, "finished job", j)
         results <- j * 2
     }
@@ -21,7 +21,7 @@ func WorkerPools() {
     jobs := make(chan int, numJobs)
     results := make(chan int, numJobs)
 
-    for w := 0; w < numJobs; w++ {
+    for w := 0; w < 3; w++ {
         go workerJob(w, jobs, results)
     }
 
