@@ -1,8 +1,8 @@
 package main
 
 import (
-    "fmt"
-    "errors"
+	"errors"
+	"fmt"
 )
 
 func f1(arg int) (int, error) {
@@ -13,18 +13,18 @@ func f1(arg int) (int, error) {
     return arg + 3, nil
 }
 
-type argError struct {
+type myOwnCustomErrorStruct struct {
     arg int
     prob string
 }
 
-func (e *argError) Error() string {
+func (e *myOwnCustomErrorStruct) Error() string {
     return fmt.Sprintf("%d - %s", e.arg, e.prob)
 }
 
 func f2(arg int) (int, error) {
     if arg == 42 {
-        return -1, &argError{arg: arg, prob: "can't work with it"}
+        return -1, &myOwnCustomErrorStruct{arg: arg, prob: "can't work with it"}
     }
 
     return arg + 3, nil
@@ -49,7 +49,7 @@ func Errors() {
 
     _, e := f2(42)
     // `e.(*argError)` is type assertion / type casting in golang
-    if ae, ok := e.(*argError); ok {
+    if ae, ok := e.(*myOwnCustomErrorStruct); ok {
         fmt.Println(ae.arg)
         fmt.Println(ae.prob)
     }
